@@ -1,0 +1,56 @@
+{
+  "name": "npm-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
+  },
+  "keywords": [
+    "Vite",
+    "Vue3",
+    "TypeScript",
+    "Element-plus",
+    "Vant"
+  ],
+  "bin": {
+    "cx": "bin/index.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "author": "chengxin.you",
+  "license": "ISC",
+  "description": "一个企业级的脚手架工具",
+  "devDependencies": {
+    "@inquirer/prompts": "^3.2.0",
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/figlet": "^1.7.0",
+    "@types/fs-extra": "^11.0.2",
+    "@types/lodash": "^4.14.199",
+    "@types/node": "^24.3.0",
+    "axios": "^1.5.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "figlet": "^1.8.2",
+    "fs-extra": "^11.1.1",
+    "lodash": "^4.17.21",
+    "log-symbols": "^4.1.0",
+    "ora": "5",
+    "progress-estimator": "^0.3.1",
+    "pure-thin-cli": "^0.1.8",
+    "rollup": "^4.6.1",
+    "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-node-externals": "^5.1.3",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "simple-git": "^3.19.1",
+    "tslib": "^2.6.1",
+    "typescript": "^5.2.2"
+  }
+}
