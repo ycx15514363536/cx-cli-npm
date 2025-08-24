@@ -1,5 +1,5 @@
 #  cx-cli
-![Npm 版本](https://img.shields.io/badge/CX_cli-v0.0.1-blue)
+![Npm 版本](https://img.shields.io/badge/CX_cli-v1.0.0-blue)
 
 ## 📖简介
 - 用于快速搭建前端项目的命令行工具
