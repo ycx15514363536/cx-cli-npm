@@ -15,21 +15,6 @@ const logger = createLogger({
   },
 })
 
-const goodPrinter = async () => {
-  const data = await figlet.text("cxin-cli", {
-    font: "Standard",
-    horizontalLayout: "default",
-    verticalLayout: "default"
-  }, (err: unknown, data: any) => {
-    if (err) {
-      console.log(chalk.red("err:", err))
-      return
-    }
-    return data
-  })
-  console.log(chalk.rgb(40, 156, 193).visible(data))
-}
-
 const gitOptions: Partial<SimpleGitOptions> = {
   baseDir: process.cwd(), // 当前工作目录
   binary: "git", // 指定 git 二进制文件路径
@@ -46,7 +31,6 @@ export const clone = async (
       estimate: 7000, // 预计下载时间
     })
     // 下面就是一些相关的提示
-    goodPrinter()
     console.log()
     console.log(chalk.blueBright(`======================================`))
     console.log(chalk.blueBright(`=====  欢迎使用 cxin-cli 脚手架  =====`))
