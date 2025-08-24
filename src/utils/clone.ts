@@ -1,6 +1,7 @@
 import simpleGit, { type SimpleGit, type SimpleGitOptions } from "simple-git"
 import createLogger from "progress-estimator"
 import chalk from "chalk"
+import figlet from 'figlet'
 import log from "./log.js"
 
 // 初始化进度条
@@ -14,7 +15,6 @@ const logger = createLogger({
 })
 
 const goodPrinter = async () => {
-  const figlet = require("figlet")
   const data = await figlet.text("cxin-cli", {
     font: "Standard",
     horizontalLayout: "default",
