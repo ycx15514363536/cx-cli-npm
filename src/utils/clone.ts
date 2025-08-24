@@ -3,8 +3,6 @@ import createLogger from "progress-estimator"
 import chalk from "chalk"
 import log from "./log.js"
 
-const figlet = require("figlet")
-
 // 初始化进度条
 const logger = createLogger({
   spinner: {
