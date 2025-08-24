@@ -1,5 +1,5 @@
-#  cx-cli
-![Npm 版本](https://img.shields.io/badge/CX_cli-v1.0.0-blue)
+#  cxin-cli
+![Npm 版本](https://img.shields.io/badge/cxin_cli-v1.0.0-blue)
 
 ## 📖简介
 - 用于快速搭建前端项目的命令行工具
@@ -11,23 +11,23 @@
 ## 📦 安装
 
 ```bash
-npm install cx-cli -g
+npm install cxin-cli -g
 ```
 ## 🚩使用
 
 ```bash
 # 使用模板创建新项目
-cx create 
+cxin create 
 
 # 执行项目文件夹名称并选择模板创建新项目
-cx create [projectName]
+cxin create [projectName]
 
 # 更新脚手架到最新版本
-cx update
+cxin update
 
 # 查看脚手架版本
-cx -v
-cx -V
-cx --version
+cxin -v
+cxin -V
+cxin --version
 
 ```
