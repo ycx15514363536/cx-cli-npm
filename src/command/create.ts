@@ -53,7 +53,7 @@ export function isOverwrite(fileName: string): Promise<boolean> {
 * @returns 返回AxiosResponse对象，如果请求失败则返回null
 */
 export const getNpmInfo = async (npmName: string) => {
-  const npmUrl = `https://registry.npmjs.org/${npmName}`
+  const npmUrl = `https://registry.npmjs.org/${npmName}/latest`
   let res = null as AxiosResponse | null
 
   try {
