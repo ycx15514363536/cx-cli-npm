@@ -14,7 +14,7 @@
     "Vant"
   ],
   "bin": {
-    "cx": "bin/index.js"
+    "cxin": "bin/index.js"
   },
   "files": [
     "dist",
