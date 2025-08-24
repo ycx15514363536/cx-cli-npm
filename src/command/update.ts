@@ -3,7 +3,7 @@ import chalk from "chalk"
 import ora from "ora"
 
 const spinner = ora({
-  text: "cx-cli 正在更新....",
+  text: "cxin-cli 正在更新....",
   spinner: {
     interval: 300,
     frames: ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"].map((item) =>
@@ -12,10 +12,10 @@ const spinner = ora({
   },
 })
 
-// 更新 cx-cli 到最新版本
+// 更新 cxin-cli 到最新版本
 export function update() {
   spinner.start()
-  process.exec("npm install cx-cli@latest -g", (error) => {
+  process.exec("npm install cxin-cli@latest -g", (error) => {
     spinner.stop()
     if (!error) {
       console.log(chalk.green("更新成功"))

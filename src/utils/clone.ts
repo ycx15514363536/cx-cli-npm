@@ -16,7 +16,7 @@ const logger = createLogger({
 const goodPrinter = async () => {
   // 使用import导入会报错，需要使用require导入
   const figlet = require("figlet")
-  const data = await figlet.text("cx-cli", {
+  const data = await figlet.text("cxin-cli", {
     font: "Standard",
     horizontalLayout: "default",
     verticalLayout: "default"
@@ -48,9 +48,9 @@ export const clone = async (
     // 下面就是一些相关的提示
     goodPrinter()
     console.log()
-    console.log(chalk.blueBright(`====================================`))
-    console.log(chalk.blueBright(`=====  欢迎使用 cx-cli 脚手架  =====`))
-    console.log(chalk.blueBright(`====================================`))
+    console.log(chalk.blueBright(`======================================`))
+    console.log(chalk.blueBright(`=====  欢迎使用 cxin-cli 脚手架  =====`))
+    console.log(chalk.blueBright(`======================================`))
     console.log()
 
     log.success(`项目创建成功 ${chalk.blueBright(projectName)}`)

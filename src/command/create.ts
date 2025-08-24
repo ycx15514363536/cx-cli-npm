@@ -72,8 +72,11 @@ export const getNpmInfo = async (npmName: string) => {
 * @returns 返回该npm包的最新版本号
 */
 export const getNpmLatestVersion = async (name: string) => {
-  const { data } = (await getNpmInfo(name)) as AxiosResponse
-  return data["dist-tags"].latest
+  const res = await getNpmInfo(name) as AxiosResponse
+  if (!res || !res.data) {
+    throw new Error(`Failed to get npm info for ${name}`)
+  }
+  return res.data["dist-tags"].latest
 }
 
 /**
@@ -84,21 +87,25 @@ export const getNpmLatestVersion = async (name: string) => {
 * @returns 如果需要更新返回true，否则返回false
 */
 export const checkVersion = async (name: string, version: string) => {
-  const latestVersion = await getNpmLatestVersion(name)
-  const need = gt(latestVersion, version)
-  if (need) {
-    console.warn(
-      `检查到cx最新版本： ${chalk.blackBright(
-        latestVersion
-      )}，当前版本是：${chalk.blackBright(version)}`
-    )
-    console.log(
-      `可使用： ${chalk.yellow(
-        "npm install cx-cli@latest"
-      )}，或者使用：${chalk.yellow("cx update")}更新`
-    )
+  try {
+    const latestVersion = await getNpmLatestVersion(name)
+    const need = gt(latestVersion, version)
+    if (need) {
+      console.warn(
+        `检查到cxin-cli最新版本： ${chalk.blackBright(
+          latestVersion
+        )}，当前版本是：${chalk.blackBright(version)}`
+      )
+      console.log(
+        `可使用： ${chalk.yellow(
+          "npm install cxin-cli@latest"
+        )}，或者使用：${chalk.yellow("cxin update")}更新`
+      )
+    }
+    return need
+  } catch (error) {
+    return false
   }
-  return need
 }
 
 /**
